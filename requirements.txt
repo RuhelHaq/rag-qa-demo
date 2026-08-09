@@ -1,7 +1,8 @@
 gradio==4.44.0
-sentence-transformers==3.0.1
+sentence-transformers>=3.0.1
 faiss-cpu==1.15.0
 anthropic==0.34.0
-numpy==1.26.4
-huggingface_hub==0.24.6
-transformers==4.44.2
+numpy>=1.26.4
+huggingface_hub>=0.24.6
+transformers>=4.44.2
+tokenizers>=0.20.0
