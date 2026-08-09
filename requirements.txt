@@ -7,3 +7,4 @@ huggingface_hub>=0.24.6
 transformers>=4.44.2
 tokenizers>=0.20.0
 audioop-lts
+requests
