@@ -1,10 +1,7 @@
 gradio==5.9.1
-sentence-transformers>=3.0.1
+fastembed
 faiss-cpu==1.15.0
 anthropic==0.34.0
 numpy>=1.26.4
-huggingface_hub>=0.24.6
-transformers>=4.44.2
-tokenizers>=0.20.0
 audioop-lts
 requests

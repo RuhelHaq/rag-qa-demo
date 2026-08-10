@@ -6,6 +6,7 @@ import numpy as np
 import gradio as gr
 import anthropic
 from sentence_transformers import SentenceTransformer
+from fastbend import TextEmbedding
 
 passages = []
 with open("passages.jsonl") as f:
@@ -13,13 +14,13 @@ with open("passages.jsonl") as f:
         passages.append(json.loads(line))
 
 index = faiss.read_index("faiss.index")
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = TextEmbedding(model_name="Sentence-Transformers/all-MiniLM-L6-v2")
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
 
 def retrieve(query, k=3):
-    query_embedding = model.encode([query], normalize_embeddings=True)
+    query_embedding = np.array(list(model.embed([query])), dtype='float')
     scores, indices = index.search(query_embedding, k)
     results = []
     for score, idx in zip(scores[0], indices[0]):
