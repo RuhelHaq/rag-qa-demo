@@ -5,7 +5,7 @@ import faiss
 import numpy as np
 import gradio as gr
 import anthropic
-from fastbend import TextEmbedding
+from fastembed import TextEmbedding
 
 passages = []
 with open("passages.jsonl") as f:
