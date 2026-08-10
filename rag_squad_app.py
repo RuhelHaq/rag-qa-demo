@@ -5,7 +5,6 @@ import faiss
 import numpy as np
 import gradio as gr
 import anthropic
-from sentence_transformers import SentenceTransformer
 from fastbend import TextEmbedding
 
 passages = []
