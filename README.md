@@ -15,7 +15,12 @@ If the retrieved context doesn't contain the answer, the system responds "I don'
 
 ## Topics covered
 
-The corpus is built from SQuAD's validation set, covering ~35-48 Wikipedia articles across a range of subjects (historical events, notable people, geography, science, and more). Questions outside this scope will correctly return "I don't know" rather than a hallucinated answer.
+The corpus is built from SQuAD's validation set, covering 48 Wikipedia articles across a range of subjects — historical events, scientific concepts, geography, institutions, and more:
+
+1973 oil crisis · Amazon rainforest · American Broadcasting Company · Apollo program · Black Death · Chloroplast · Civil disobedience · Computational complexity theory · Construction · Ctenophora · Doctor Who · Economic inequality · European Union law · Force · French and Indian War · Fresno, California · Genghis Khan · Geology · Harvard University · Huguenot · Immune system · Imperialism · Intergovernmental Panel on Climate Change · Islamism · Jacksonville, Florida · Kenya · Martin Luther · Newcastle upon Tyne · Nikola Tesla · Normans · Oxygen · Packet switching · Pharmacy · Prime number · Private school · Rhine · Scottish Parliament · Sky (United Kingdom) · Southern California · Steam engine · Super Bowl 50 · Teacher · United Methodist Church · University of Chicago · Victoria (Australia) · Victoria and Albert Museum · Warsaw · Yuan dynasty
+
+Questions outside these topics will correctly return "I don't know" rather than a hallucinated answer — this behavior was verified during evaluation.
+
 ## Tech stack
 
 - **Streamlit** — web interface
