@@ -20,7 +20,7 @@ def load_resources():
 
     index = faiss.read_index("faiss.index")
     model = TextEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
 
     return passages, index, model, client
 
