@@ -10,6 +10,28 @@ from fastembed import TextEmbedding
 # --- Page setup ---
 st.set_page_config(page_title="RAG-QA: SQuAD", page_icon="🔎", layout="centered")
 
+with st.sidebar:
+    st.subheader("📚 Topics this demo covers")
+    st.caption("Ask about any of these 48 Wikipedia topics for best results:")
+    topics = [
+        "1973 oil crisis", "Amazon rainforest", "American Broadcasting Company",
+        "Apollo program", "Black Death", "Chloroplast", "Civil disobedience",
+        "Computational complexity theory", "Construction", "Ctenophora",
+        "Doctor Who", "Economic inequality", "European Union law", "Force",
+        "French and Indian War", "Fresno, California", "Genghis Khan", "Geology",
+        "Harvard University", "Huguenot", "Immune system", "Imperialism",
+        "Intergovernmental Panel on Climate Change", "Islamism",
+        "Jacksonville, Florida", "Kenya", "Martin Luther", "Newcastle upon Tyne",
+        "Nikola Tesla", "Normans", "Oxygen", "Packet switching", "Pharmacy",
+        "Prime number", "Private school", "Rhine", "Scottish Parliament",
+        "Sky (United Kingdom)", "Southern California", "Steam engine",
+        "Super Bowl 50", "Teacher", "United Methodist Church",
+        "University of Chicago", "Victoria (Australia)",
+        "Victoria and Albert Museum", "Warsaw", "Yuan dynasty",
+    ]
+    for t in topics:
+        st.write(f"- {t}")
+
 # --- Load data and models (cached so this only runs once, not on every interaction) ---
 @st.cache_resource
 def load_resources():
